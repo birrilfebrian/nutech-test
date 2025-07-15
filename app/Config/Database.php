@@ -9,6 +9,7 @@ use CodeIgniter\Database\Config;
  */
 class Database extends Config
 {
+
     /**
      * The directory that holds the Migrations and Seeds directories.
      */
@@ -26,10 +27,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'mysql-production-a92d.up.railway.app',
-        'username'     => 'root',
+        'hostname'     => env('database.default.hostname', '127.0.0.1'),
+        'username'     => env('database.default.user', 'root'),
         'password'     => '',
-        'database'     => 'railway',
+        'database'     => env('database.default.database'),
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

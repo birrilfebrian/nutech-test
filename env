@@ -50,17 +50,17 @@ app.baseURL = '${BASE_URL}'
 
 #--------------------------------------------------------------------
 
-# database.default.hostname = localhost
+database.default.hostname = '${DB_HOST}'
 
-# database.default.database = ci4
+database.default.database = '${DB_NAME}'
 
-# database.default.username = root
+database.default.username = '${DB_USER}'
 
-# database.default.password = root
+database.default.password = '${DB_PASS}'
 
-# database.default.DBDriver = MySQLi
+database.default.DBDriver = MySQLi
 
-# database.default.DBPrefix =
+# database.default.DBPrefix = ''
 
 # database.default.port = 3306
 
