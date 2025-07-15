@@ -20,5 +20,5 @@ COPY . /var/www/html/
 # Set permission
 RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
 
-# Jalankan Apache
+# Jalankan Apache bismillah
 CMD ["apache2-foreground"]
