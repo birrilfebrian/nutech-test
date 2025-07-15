@@ -26,7 +26,7 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'sql212.infinityfree.com',
+        'hostname'     => 'sql212.sinfinityfree.com',
         'username'     => 'if0_39477523',
         'password'     => 'Wakak111',
         'database'     => 'if0_39477523_nutech',
