@@ -32,3 +32,5 @@ $routes->group('topupapi', function ($routes) {
 $routes->group('paymentapi', function ($routes) {
     $routes->post('/', 'PaymentController::index');
 });
+
+$routes->get('health', 'HealthCheck::index');
