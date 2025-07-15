@@ -33,4 +33,4 @@ $routes->group('paymentapi', function ($routes) {
     $routes->post('/', 'PaymentController::index');
 });
 
-$routes->get('health', 'HealthCheck::index');
+$routes->get('/health', 'HealthCheck::index');
