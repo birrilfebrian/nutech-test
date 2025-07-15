@@ -25,11 +25,10 @@ async function loadTransactions() {
     if (json.status == "0" && json.data.records) {
       renderTransactions(json.data.records, true);
     } else {
-      console.log(json);
       throw new Error("API tidak mengembalikan data");
     }
   } catch (error) {
-    console.warn("⚠️ API gagal, fallback ke DB:", error.message);
+    console.warn("API gagal, fallback ke DB:", error.message);
     try {
       const resDb = await fetch("/transactions/from-db");
       const jsonDb = await resDb.json();
@@ -43,7 +42,7 @@ async function loadTransactions() {
     } catch (dbError) {
       container.innerHTML =
         "<p class='text-sm text-red-500'>Tidak dapat memuat transaksi.</p>";
-      console.error("❌ Gagal DB juga:", dbError);
+      console.error("Gagal DB juga:", dbError);
     }
   }
 }
@@ -110,7 +109,6 @@ function setupScrollDetector() {
 
     if (isAtBottom && !allDataLoaded) {
       btn.classList.remove("hidden");
-      console.log("is bottom?", isAtBottom);
     } else {
       btn.classList.add("hidden");
     }
@@ -121,7 +119,6 @@ function setupShowMoreClick() {
   const btn = document.getElementById("loadMoreBtn");
   btn.addEventListener("click", async () => {
     const bearerToken = await getBearerToken();
-    console.log("btnpressed");
     try {
       const res = await fetch(
         `https://take-home-test-api.nutech-integrasi.com/transaction/history?offset=${currentOffset}`,
