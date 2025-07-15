@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => '127.0.0.1',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'railway',
+        'hostname'     => 'mysql-niyl.sliplane.app',
+        'username'     => 'admin',
+        'password'     => 'aVBtmYW4K7txiKnJ',
+        'database'     => 'default',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

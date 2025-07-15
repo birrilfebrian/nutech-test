@@ -9,7 +9,8 @@ class App extends BaseConfig
     public function __construct()
     {
         parent::__construct();
-        $this->baseURL = env('app.baseURL', 'http://localhost/');
+        $this->baseURL = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' .
+            ($_SERVER['HTTP_HOST'] ?? 'localhost') . '/';
     }
     /**
      * --------------------------------------------------------------------------
