@@ -10,7 +10,7 @@ class HealthCheck extends Controller
     {
         return $this->response->setStatusCode(200)->setJSON([
             'status' => 'ok',
-            'message' => env('app.baseURL')
+
         ]);
     }
 }
