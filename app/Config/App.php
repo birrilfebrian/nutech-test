@@ -16,8 +16,8 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
+    public string $baseURL = (isset($_SERVER['HTTP_HOST']) ? 'https' : 'http') . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . '/';
 
-    public string $baseURL = env('app.baseURL');
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
