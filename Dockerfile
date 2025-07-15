@@ -4,7 +4,7 @@ FROM php:8.1-apache
 RUN apt-get update && apt-get install -y \
     libicu-dev \
     zip unzip git \
-    && docker-php-ext-install intl pdo pdo_mysql
+    && docker-php-ext-install intl pdo pdo_mysql mysqli
 
 # Aktifkan mod_rewrite Apache
 RUN a2enmod rewrite
